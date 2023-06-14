@@ -4,9 +4,9 @@
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="footer-nav">
 		                <ul>
-		                   <li><a href="index.php" style="text-decoration:none;">Home</a></li>
-			  		   <li><a href="repertuar.php" style="text-decoration:none;">Movies</a></li>
-			  		   <li><a href="login.php" style="text-decoration:none;">Login</a></li>
+		                   <li><a href="index.php" style="text-decoration:none;">Strona główna</a></li>
+			  		   <li><a href="repertuar.php" style="text-decoration:none;">Repertuar</a></li>
+			  		   <li><a href="login.php" style="text-decoration:none;">Logowanie</a></li>
 		                   </ul>
 		              </div>
 				</div>
@@ -20,8 +20,10 @@
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="call_info">
-						<p class="txt_3">Call us toll free:</p>
-						<p class="txt_4">1 200 696 39669</p>
+						<p class="txt_4">Skontaktuj się z nami!</p>
+						<p class="txt_3">ul. Kinowa 55 Poznań</p>
+						<p class="txt_3">Telefon: +48 600 000 000</p>
+						<p class="txt_3">email: kino@kinowadomena.gov</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
