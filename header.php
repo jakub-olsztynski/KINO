@@ -50,9 +50,9 @@ date_default_timezone_set('Asia/Kathmandu');
 		       	<div class="field" >
 		       	
 		       		     
-                                <input type="text" placeholder="Enter A Movie Name" style="height:30px;width:300px"  required id="search111" name="search">
+                                <input type="text" placeholder="Podaj nazwę filmu" style="height:30px;width:300px"  required id="search111" name="search">
                                 
-                                <input type="submit" value="Search" style="height:34px;padding-top:3px" id="button111">
+                                <input type="submit" value="Szukaj" style="height:34px;padding-top:3px" id="button111">
     </div>       	
 
 		       </fieldset>
