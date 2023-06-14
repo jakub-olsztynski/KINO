@@ -1,17 +1,16 @@
-**Database Name: movietheatredb**
-
-**Developed by Yugesh Verma**
-
-**Recommended PHP Version 5.6.3**
+**DB Name: movietheatredb**
 
 
-**Admin Login Details**
+**PHP Version 5.6.3**
+
+
+**Admin Login**
 
 Username: admin
 Password: password
 
 
-**Theatre Login Details**
+**Theatre Login**
 
 Username: THR760801
 Password: PWD649976

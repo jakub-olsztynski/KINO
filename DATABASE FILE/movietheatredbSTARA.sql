@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2023 at 07:51 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Apr 15, 2021 at 08:23 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -39,7 +38,7 @@ CREATE TABLE `tbl_bookings` (
   `ticket_date` date NOT NULL,
   `date` date NOT NULL,
   `status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_bookings`
@@ -62,7 +61,7 @@ CREATE TABLE `tbl_contact` (
   `email` varchar(100) NOT NULL,
   `mobile` int(11) NOT NULL,
   `subject` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -76,7 +75,7 @@ CREATE TABLE `tbl_login` (
   `username` varchar(50) NOT NULL COMMENT 'email',
   `password` varchar(50) NOT NULL,
   `user_type` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_login`
@@ -108,16 +107,18 @@ CREATE TABLE `tbl_movie` (
   `image` varchar(200) NOT NULL,
   `video_url` varchar(200) NOT NULL,
   `status` int(1) NOT NULL COMMENT '0 means active '
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_movie`
 --
 
 INSERT INTO `tbl_movie` (`movie_id`, `t_id`, `movie_name`, `cast`, `desc`, `release_date`, `image`, `video_url`, `status`) VALUES
-(18, 1, 'Miś', 'Stanisław Tym, Stanisław Paluch, Barbara Burska, Bronisław Pawlik, Krzysztof Kowalewski ', 'Komedia złożona z groteskowych epizodów ukazujących rozpad PRL-owskiego systemu. Liczne sceny z barów mlecznych, urzędów i sklepów ujawniają absurd codziennej egzystencji Polaków. Wokół historii Ochódzkiego narasta wiele ważnych, małych opowieści charakteryzujących rzeczywistość początku lat osiemdziesiątych.', '1981-05-04', 'images/mis.jpg', 'https://www.youtube.com/watch?v=WeW5losH_5A', 0),
-(19, 1, 'Rejs', 'Stanisław Tym, Zdzisław Maklakiewicz, Jan Himilsbach, Jolanta Lothe, Wanda Stanisławska-Lothe, Jerzy Dobrowolski, Andrzej Dobosz', 'Na pokład wycieczkowego statku odbywającego rejsy po Wiśle wsiada pasażer bez biletu. Kapitan bierze go za instruktora kulturalno-oświatowego, a gapowicz z ochotą wciela się w tę rolę.', '1970-10-19', 'images/rejs.jpg', 'https://www.youtube.com/watch?v=NasXQu3y2Z4', 0),
-(20, 1, 'Chłopaki nie płaczą', 'Maciej Stuhr, Cezary Pazura, Michał Milowicz, Mirosław Zbrojewicz', 'Bohaterami filmu są dwaj młodzi przyjaciele: skrzypek Kuba i Oskar, którzy przez przypadek zostają wplątani w aferę z gangsterami. Pewnego wieczoru Kuba postanawia pomóc swemu nieśmiałemu i zakompleksionemu przyjacielowi ściągając do domu jego wuja dwie dziewczyny z agencji towarzyskiej.', '2000-02-25', 'images/chlopaki.jpg', 'https://www.youtube.com/watch?v=0Pl_vhON4A4', 0);
+(1, 3, 'The Invisible Man', 'Elisabeth Moss, Oliver Jackson-Cohen, Aldis Hodge, Storm Reid', 'Cecilia\'s abusive ex-boyfriend fakes his death and becomes invisible to stalk and torment her. She begins experiencing strange events and decides to hunt down the truth on her own.', '2020-03-04', 'images/tim.jpg', 'https://www.youtube.com/watch?v=WO_FJdiY9dA', 0),
+(11, 6, 'Cherry', 'Tom Holland, Ciara Bravo, Harry Holland, Kelli Berglund', 'Cherry (Tom Holland) drifts from college dropout to army medic in Iraq-anchored only by his one true love, Emily (Ciara Bravo). But after returning from the war with PTSD, his life spirals into drugs.', '2021-03-01', 'images/cherry.jpg', 'https://www.youtube.com/watch?v=H5bH6O0bErk', 0),
+(12, 6, 'Godzilla vs. Kong', 'Millie Bobby Brown, Alexander Skarsgard, Rebecca Hall', 'The initial confrontation between the two titans -- instigated by unseen forces -- is only the beginning of the mystery that lies deep within the core of the planet.', '2021-03-31', 'images/gvkpster.jpg', 'https://www.youtube.com/watch?v=odM92ap8_c0', 0),
+(13, 6, 'Outside the Wire', 'Anthony Mackie, Damson Idris, Emily Beecham', 'In the near future, a drone pilot sent into a war zone finds himself paired up with a top-secret android officer on a mission to stop a nuclear attack.', '2021-01-28', 'images/otw.jpg', 'https://www.youtube.com/watch?v=u8ZsUivELbs', 0),
+(17, 6, 'Justice League', 'Ben Affleck, Henry Cavil, Ezra Miller', 'This is a demo description for the movie ZSJL.', '2021-03-22', 'images/zsjl.jpg', 'https://www.youtube.com/watch?v=vM-Bja2Gy04', 0);
 
 -- --------------------------------------------------------
 
@@ -132,7 +133,7 @@ CREATE TABLE `tbl_news` (
   `news_date` date NOT NULL,
   `description` varchar(200) NOT NULL,
   `attachment` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_news`
@@ -140,7 +141,8 @@ CREATE TABLE `tbl_news` (
 
 INSERT INTO `tbl_news` (`news_id`, `name`, `cast`, `news_date`, `description`, `attachment`) VALUES
 (3, 'Black Widow', 'Scarlett Johansson, Florence Pugh, David Harbour, Rachel Weisz', '2021-07-09', 'At birth the Black Widow (aka Natasha Romanova) is given to the KGB, which grooms her to become its ultimate operative.', 'news_images/blackwidow.jpg'),
-(11, 'Oppenheimer', 'Cillian Murphy, Emily Blunt, Matt Damon', '2023-07-21', 'Historia amerykańskiego naukowca J. Roberta Oppenheimera i jego roli w stworzeniu bomby atomowej. ', 'news_images/oppie.jpg');
+(9, 'Shang-Chi and the Legend of the Ten Rings', 'Simu Liu, Awkwafina, Tony Leung, Fala Chen, Micheele Yeoh', '2021-09-14', 'Shang-Chi is a master of numerous unarmed and weaponry-based wushu styles, including the use of the gun, nunchaku, and jian.', 'news_images/shangchi.jpg'),
+(10, 'The Eternals', 'Richard Madden, Salma Hayek, Angelina Jolie, Kit Harrington', '2021-11-04', 'The saga of the eternals, a race of immortal beings who lived on earth and shaped its history and civilizations.', 'news_images/eternals.jpg');
 
 -- --------------------------------------------------------
 
@@ -155,7 +157,7 @@ CREATE TABLE `tbl_registration` (
   `phone` varchar(12) NOT NULL,
   `age` int(2) NOT NULL,
   `gender` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_registration`
@@ -178,7 +180,7 @@ CREATE TABLE `tbl_screens` (
   `screen_name` varchar(110) NOT NULL,
   `seats` int(11) NOT NULL COMMENT 'number of seats',
   `charge` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_screens`
@@ -206,7 +208,7 @@ CREATE TABLE `tbl_shows` (
   `start_date` date NOT NULL,
   `status` int(11) NOT NULL COMMENT '1 means show available',
   `r_status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_shows`
@@ -216,8 +218,7 @@ INSERT INTO `tbl_shows` (`s_id`, `st_id`, `theatre_id`, `movie_id`, `start_date`
 (19, 15, 6, 11, '2021-04-15', 0, 1),
 (20, 20, 6, 13, '2021-04-15', 0, 1),
 (21, 19, 6, 12, '2021-03-31', 1, 1),
-(22, 18, 6, 17, '2021-04-16', 1, 1),
-(23, 1, 3, 18, '2023-06-10', 0, 1);
+(22, 18, 6, 17, '2021-04-16', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -230,7 +231,7 @@ CREATE TABLE `tbl_show_time` (
   `screen_id` int(11) NOT NULL,
   `name` varchar(40) NOT NULL COMMENT 'noon,second,etc',
   `start_time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_show_time`
@@ -271,7 +272,7 @@ CREATE TABLE `tbl_theatre` (
   `place` varchar(100) NOT NULL,
   `state` varchar(50) NOT NULL,
   `pin` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_theatre`
@@ -356,62 +357,51 @@ ALTER TABLE `tbl_theatre`
 --
 ALTER TABLE `tbl_bookings`
   MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
 --
 -- AUTO_INCREMENT for table `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `tbl_login`
 --
 ALTER TABLE `tbl_login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
 --
 -- AUTO_INCREMENT for table `tbl_movie`
 --
 ALTER TABLE `tbl_movie`
-  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
+  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `tbl_news`
 --
 ALTER TABLE `tbl_news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `tbl_registration`
 --
 ALTER TABLE `tbl_registration`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `tbl_screens`
 --
 ALTER TABLE `tbl_screens`
   MODIFY `screen_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `tbl_shows`
 --
 ALTER TABLE `tbl_shows`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
-
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `tbl_show_time`
 --
 ALTER TABLE `tbl_show_time`
   MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
 --
 -- AUTO_INCREMENT for table `tbl_theatre`
 --
 ALTER TABLE `tbl_theatre`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
