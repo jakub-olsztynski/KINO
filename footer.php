@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" id="kontakt">
 	<div class="wrap">
 			<div class="footer-top">
 				<div class="col_1_of_4 span_1_of_4">
@@ -121,3 +121,5 @@
             }
         });
     </script>
+		<!--! dodaje ! -->
+<script src="js/scrolling.js"></script>
