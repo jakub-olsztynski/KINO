@@ -111,6 +111,7 @@ menu,
 nav,
 section {
   display: block;
+  background-color: maroon;
 }
 ol,
 ul {
@@ -192,9 +193,10 @@ body {
 }
 .header {
   background: url(../images/hd-bg.png);
+  
 }
 .header-top {
-  border-bottom: 2px ridge #333;
+  border-bottom: 2px ridge #800000;
 }
 .wrap {
   width: 80%;
@@ -527,7 +529,7 @@ p.s-img a:hover {
 }
 /*--Footer--*/
 .footer {
-  background: #222;
+  background: 222;
 }
 .footer-top {
   padding: 20px 0;
