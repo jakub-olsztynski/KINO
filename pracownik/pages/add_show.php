@@ -16,11 +16,11 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add Show
+        Dodaj Seans
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Add Show</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Indeks</a></li>
+        <li class="active">Dodaj Seans</li>
       </ol>
     </section>
 
@@ -33,9 +33,9 @@ include('header.php');
           <?php include('../../msgbox.php');?>
           <form action="process_addshow.php" method="post" id="form1">
             <div class="form-group">
-              <label class="control-label">Select Movie</label>
+              <label class="control-label">Wybierz Film</label>
               <select name="movie" class="form-control">
-                <option value>Select Movie</option>
+                <option value>Wybierz Film</option>
                 <?php
                   $mv=mysqli_query($con,"select * from tbl_movie where status='0'");
                   while($movie=mysqli_fetch_array($mv))
@@ -46,12 +46,12 @@ include('header.php');
                   }
                 ?>
               </select>
-              <?php $frm->validate("movie",array("required","label"=>"Movie")); // Validating form using form builder written in form.php ?>
+              <?php $frm->validate("movie",array("required","label"=>"Film")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <label class="control-label">Select Screen</label>
+              <label class="control-label">Wybierz Sale</label>
               <select name="screen" class="form-control" id="screen">
-                <option value>Select Screen</option>
+                <option value>Wybierz Sale</option>
                 <?php
                   $sc=mysqli_query($con,"select * from tbl_screens where t_id='".$_SESSION['theatre']."'");
                   while($screen=mysqli_fetch_array($sc))
@@ -62,22 +62,22 @@ include('header.php');
                   }
                 ?>
               </select>
-              <?php $frm->validate("screen",array("required","label"=>"Screen")); // Validating form using form builder written in form.php ?>
+              <?php $frm->validate("screen",array("required","label"=>"Sala")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <label class="control-label">Select Show Times</label>
+              <label class="control-label">Wybierz Godzinę Rozpoczęcia Seansu</label>
               <select name="stime[]" class="form-control" id="stime" multiple>
-                <option value="0">Select Show Times</option>
+                <option value="0">Godzina Rozpoczęcia Seansu</option>
               </select>
               
             </div>
             <div class="form-group">
-              <label class="control-label">Start Date</label>
+              <label class="control-label">Data rozpoczęcia</label>
               <input type="date" name="sdate" class="form-control"/>
-              <?php $frm->validate("sdate",array("required","label"=>"Start Date")); // Validating form using form builder written in form.php ?>
+              <?php $frm->validate("sdate",array("required","label"=>"Data rozpoczęcia")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <button class="btn btn-success">Add Show</button>
+              <button class="btn btn-success">Dodaj Seans</button>
             </div>
           </form>
         </div> 
@@ -105,7 +105,7 @@ include('footer.php');
 			$('#stime').html(data);    
 		})
 		.fail(function(){
-			$('#stime').html('<option><i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...</option>');
+			$('#stime').html('<option><i class="glyphicon glyphicon-info-sign"></i> Coś poszło nie tak. Spróbuj ponownie...</option>');
 		});
   });
 </script>

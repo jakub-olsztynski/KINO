@@ -2,7 +2,7 @@
 include('config.php');
 session_start();
 $email = $_POST["Email"];
-$pass = $_POST["Password"];
+$pass = $_POST["Hasło"];
 $qry=mysqli_query($con,"select * from tbl_login where username='$email' and password='$pass'");
 if(mysqli_num_rows($qry))
 {
@@ -21,14 +21,14 @@ if(mysqli_num_rows($qry))
 	}
 	else
 	{
-		$_SESSION['error']="Login Failed!";
+		$_SESSION['error']="Nie udało się zalogować!";
 		header("location:login.php");
 	}
 	
 }
 else
 {
-	$_SESSION['error']="Login Failed!";
+	$_SESSION['error']="Nie udało się zalogować!";
 	header("location:login.php");
 }
 ?>

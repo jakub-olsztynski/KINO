@@ -5,7 +5,7 @@ if(!isset($_SESSION['admin']))
 {
   header('location:../index.php');
 }
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set('Europe/Warsaw');
 include('../../config.php');
 ?>
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ include('../../config.php');
               </li>
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="logout.php" class="btn btn-default btn-flat">Logout</a>
+                  <a href="logout.php" class="btn btn-default btn-flat">Wyloguj</a>
                 </div>
               </li>
             </ul>
@@ -105,7 +105,7 @@ include('../../config.php');
         </div>
         <div class="pull-left info">
           <p>Administrator</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> Zalogowano</a>
         </div>
       </div>
       
@@ -114,7 +114,7 @@ include('../../config.php');
       <ul class="sidebar-menu">
         <li class="treeview">
           <a href="index.php">
-            <i class="fa fa-home"></i> <span>Home</span>
+            <i class="fa fa-home"></i> <span>Start</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -122,16 +122,16 @@ include('../../config.php');
         </li>
         
           <li class="treeview">
-          <a href="add_theatre.php">
-            <i class="fa fa-film"></i> <span>Add Theatre</span>
+          <a href="add_account.php">
+            <i class="fa fa-film"></i> <span>Dodaj Pracownika</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
         </li>
         <li class="treeview">
-          <a href="add_movie_news.php">
-            <i class="fa fa-plus"></i> <span>Upcoming Movie News</span>
+          <a href="list_accounts.php">
+            <i class="fa fa-plus"></i> <span>Lista Pracowników</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

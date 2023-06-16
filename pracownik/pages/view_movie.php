@@ -8,11 +8,11 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Movies List
+        Lista Filmów
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Movies List</li>
+        <li><a href="index"><i class="fa fa-dashboard"></i> Indeks</a></li>
+        <li class="active">Lista Filmów</li>
       </ol>
     </section>
 
@@ -43,6 +43,7 @@ include('header.php');
                   <!-- checkbox -->
                   <!-- todo text -->
                   <span class="text"><?php echo $c['movie_name'];?></span>
+                  <span class="text"><?php echo $c['status'];?></span>
                   <!-- Emphasis label -->
                   
                   <!-- General tools such as edit or delete-->
@@ -71,7 +72,7 @@ include('footer.php');
 <script>
 function del(m)
     {
-        if (confirm("Are you want to delete this movie") == true) 
+        if (confirm("Czy na pewno chcesz usunąć film?") == true) 
         {
             window.location="del_movie.php?mid="+m;
         } 

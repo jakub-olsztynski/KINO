@@ -12,22 +12,22 @@
         $movie=mysqli_fetch_array($m);
         ?>
         
-         <h3><small>Movie : </small><?php echo $movie['movie_name'];?></h3>
+         <h3><small>Film : </small><?php echo $movie['movie_name'];?></h3>
         <table class="table">
             <th>
-                Slno
+                Seans#
             </th>
             <th>
-                Ticket id
+                Bilet id
             </th>
             <th>
-                Viewer Name
+                Imie zamawiającego
             </th>
             <th>
-                Phone
+                Telefon
             </th>
             <th>
-                Number of Tickets
+                Liczba biletów
             </th>
         <?php
     $sl=1;
@@ -52,7 +52,7 @@
     else
     {
         ?>
-        <h3>No Show</h3>
+        <h3>Brak seansu</h3>
         <?php
     }
 ?></div>

@@ -27,27 +27,27 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#">Theatre Assistant   <b>Theatre Panel</b></a>
+    <a href="#">Pracownik KINA      <b>       Panel pracownika</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <?php session_start(); include('../msgbox.php');?>
-    <p class="login-box-msg">Please login to start your session</p>
+    <p class="login-box-msg">Zaloguj się aby rozpocząć sesje</p>
 <form action="pages/process_login.php" method="post">
       <div class="form-group has-feedback">
-        <input name="Email" type="text" size="25" placeholder="Username" class="form-control"/>
+        <input name="Email" type="text" size="25" placeholder="Nazwa" class="form-control"/>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input name="Password" type="password" size="25" placeholder="Password" class="form-control" />
+        <input name="Password" type="password" size="25" placeholder="Hasło" class="form-control" />
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group">
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary">Zaloguj</button>
       </div>
     </form>
 
-    <a href="../admin/index.php">Go To Admin Panel</a>
+    <a href="../admin/index.php">Przełącz na panel Admina</a>
 
   </div>
   <!-- /.login-box-body -->

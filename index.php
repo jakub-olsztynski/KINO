@@ -64,4 +64,4 @@ include('header.php');
 </div>
 <?php include('footer.php');?>
 </div>
-<?php include('searchbar.php');?>
+<!-- <?php include('searchbar.php');?> -->

@@ -11,7 +11,7 @@ if(!isset($_SESSION['user']))
 		<div class="content-top">
 				<div class="section group">
 					<div class="about span_1_of_2">	
-						<h3 style="color:black;" class="text-center">BOOKING HISTORY</h3>
+						<h3 style="color:black;" class="text-center">HISTORIA REZERWACJI</h3>
 						<?php include('msgbox.php');?>
 						<?php
 				$bk=mysqli_query($con,"select * from tbl_bookings where user_id='".$_SESSION['user']."'");
@@ -20,13 +20,13 @@ if(!isset($_SESSION['user']))
 					?>
 					<table class="table table-bordered">
 						<thead>
-						<th>Booking Id</th>
-						<th>Movie</th>
-						<th>Theatre</th>
-						<th>Screen</th>
-						<th>Show</th>
-						<th>Seats</th>
-						<th>Amount</th>
+						<th>ID Rezerwacji</th>
+						<th>Film</th>
+						<th>Kino</th>
+						<th>Sala</th>
+						<th>Seans</th>
+						<th>Ilość miejsc</th>
+						<th>Kwota</th>
 						<th></th>
 						</thead>
 						<tbody>
@@ -62,7 +62,7 @@ if(!isset($_SESSION['user']))
 									<?php echo $bkg['no_seats'];?>
 								</td>
 								<td>
-									Rs. <?php echo $bkg['amount'];?>
+									PLN. <?php echo $bkg['amount'];?>
 								</td>
 								<td>
 									<?php  if($bkg['ticket_date']<date('Y-m-d'))
@@ -73,7 +73,7 @@ if(!isset($_SESSION['user']))
 									}
 									else
 									{?>
-									<a href="cancel.php?id=<?php echo $bkg['book_id'];?>" style="text-decoration:none; color:red;">Cancel</a>
+									<a href="cancel.php?id=<?php echo $bkg['book_id'];?>" style="text-decoration:none; color:red;">Anuluj</a>
 									<?php
 									}
 									?>
@@ -88,8 +88,8 @@ if(!isset($_SESSION['user']))
 				else
 				{
 					?>
-					<h3 style="color:red;" class="text-center">No Previous Bookings Found!</h3>
-					<p>Once you start booking movie tickets with this account, you'll be able to see all the booking history.</p>
+					<h3 style="color:red;" class="text-center">Brak historii rezerwacji do wyświetlenia</h3>
+					<p>Po dokonaniu rezerwacji tu wyświeli się ich lista</p>
 					<?php
 				}
 				?>
@@ -106,7 +106,7 @@ if(!isset($_SESSION['user']))
 	$('#seats').change(function(){
 		var charge=<?php echo $screen['charge'];?>;
 		amount=charge*$(this).val();
-		$('#amount').html("Rs "+amount);
+		$('#amount').html("PLN "+amount);
 		$('#hm').val(amount);
 	});
 </script>
