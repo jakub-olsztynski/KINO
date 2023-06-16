@@ -23,5 +23,5 @@ else
 <body><table align='center'><tr><td><STRONG>Transakcja w trakcie realizacji,</STRONG></td></tr><tr><td><font color='blue'>Please Wait <i class="fa fa-spinner fa-pulse fa-fw"></i>
 <span class="sr-only"></font></td></tr><tr><td>(Nie odświeżaj ani zamykaj tej strony!)</td></tr></table><h2>
 <script>
-    setTimeout(function(){ window.location="profile.php"; }, 3000);
+    setTimeout(function(){ window.location="profile.php"; }, 2000);
 </script>

