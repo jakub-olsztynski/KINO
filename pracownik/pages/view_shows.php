@@ -66,7 +66,7 @@ include('header.php');
                     <?php echo $screen['screen_name'];?>
                   </td>
                   <td>
-                    <?php echo date('h:i A',strtotime($show_time['start_time']))." ( ".$show_time['name']." Show )";?>
+                    <?php echo date('h:i A',strtotime($show_time['start_time']))." ( ".$show_time['name'].")";?>
                   </td>
                   <td>
                     <?php echo $movie['movie_name'];?>
