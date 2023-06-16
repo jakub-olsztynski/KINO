@@ -5,7 +5,7 @@ if(!isset($_SESSION['theatre']))
 {
   header('location:../index.php');
 }
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set('Europe/Warsaw');
 include('../../config.php');
 $th=mysqli_query($con,"select * from tbl_theatre where id='".$_SESSION['theatre']."'");
 $theatre=mysqli_fetch_array($th);
@@ -15,7 +15,7 @@ $theatre=mysqli_fetch_array($th);
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Theatre Assistance</title>
+  <title>Zarządzanie kinem</title>
   <!-- valodation -->
   <script type="text/javascript" src="../validation/vendor/jquery/jquery-1.10.2.min.js"></script>
   <link rel="stylesheet" href="../validation/dist/css/bootstrapValidator.css"/> 
@@ -49,15 +49,15 @@ $theatre=mysqli_fetch_array($th);
     <!-- Logo -->
     <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>T</b>A</span>
+      <span class="logo-mini"><b>Z</b>K</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Theatre</b> Assistant</span>
+      <span class="logo-lg"><b>Zarządzanie</b> KINEM</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Przełącz nawigacje</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -77,12 +77,12 @@ $theatre=mysqli_fetch_array($th);
                 <img src="cinema.png" class="img-circle" alt="User Image">
 
                 <p>
-                  Theatre Assistance
+                  Zarządzanie
                 </p>
               </li>
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="logout.php" class="btn btn-default btn-flat">Logout</a>
+                  <a href="logout.php" class="btn btn-default btn-flat">Wyloguj</a>
                 </div>
               </li>
             </ul>
@@ -107,7 +107,7 @@ $theatre=mysqli_fetch_array($th);
         </div>
         <div class="pull-left info">
           <p><?php echo $theatre['name'];?></p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> Zalogowano</a>
         </div>
       </div>
       
@@ -116,7 +116,7 @@ $theatre=mysqli_fetch_array($th);
       <ul class="sidebar-menu">
         <li class="treeview">
           <a href="index.php">
-            <i class="fa fa-home"></i> <span>Home</span>
+            <i class="fa fa-home"></i> <span>Indeks</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -125,7 +125,7 @@ $theatre=mysqli_fetch_array($th);
         
           <li class="treeview">
           <a href="add_movie.php">
-            <i class="fa fa-plus"></i> <span>Add Movie</span>
+            <i class="fa fa-plus"></i> <span>Dodaj Film</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -134,7 +134,7 @@ $theatre=mysqli_fetch_array($th);
 
         <li class="treeview">
           <a href="view_movie.php">
-            <i class="fa fa-list-alt"></i> <span>View Movies</span>
+            <i class="fa fa-list-alt"></i> <span>Wyświetl liste filmów</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -143,7 +143,7 @@ $theatre=mysqli_fetch_array($th);
 
         <li class="treeview">
           <a href="add_show.php">
-            <i class="fa fa-ticket"></i> <span>Add Show</span>
+            <i class="fa fa-ticket"></i> <span>Dodaj Seans</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -151,7 +151,7 @@ $theatre=mysqli_fetch_array($th);
         </li>
         <li class="treeview">
           <a href="todays_shows.php">
-            <i class="fa fa-calendar"></i> <span>Todays Shows</span>
+            <i class="fa fa-calendar"></i> <span>Dzisiejsze Seanse</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -159,7 +159,7 @@ $theatre=mysqli_fetch_array($th);
         </li>
         <li class="treeview">
           <a href="tickets.php">
-            <i class="fa fa-film"></i> <span>Todays Bookings</span>
+            <i class="fa fa-film"></i> <span>Dzisiejsze rezerwacje</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -167,15 +167,7 @@ $theatre=mysqli_fetch_array($th);
         </li>
         <li class="treeview">
           <a href="view_shows.php">
-            <i class="fa fa-eye"></i> <span>View Show</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="add_theatre_2.php">
-            <i class="fa fa-film"></i> <span>Theatre Details</span>
+            <i class="fa fa-eye"></i> <span>Wyświetl status seansu</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

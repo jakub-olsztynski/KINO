@@ -70,7 +70,7 @@ class formBuilder
         {
             $label=$rules["label"];
            $this->validators=$this->validators."notEmpty: {
-                        message: 'The $label is required and can\'t be empty'
+                        message: '$label jest wymagana i nie może być pusta'
                     }," ;
         }
         if (array_key_exists("min",$rules) && array_key_exists("max",$rules)) // if rules array have value min and max
@@ -91,7 +91,7 @@ class formBuilder
             $max=$rules["max"];
             $this->validators=$this->validators."stringLength: {
                     max: $max,
-                    message: 'The $label must be less than $max characters long'
+                    message: '$label może mieć maximum $max znaków'
                 }," ;
         }
         else if(array_key_exists("min",$rules)) // if rules array have value min
@@ -100,7 +100,7 @@ class formBuilder
             $min=$rules["min"];
             $this->validators=$this->validators."stringLength: {
                     min: $min,
-                    message: 'The $label must be more than $min characters long'
+                    message: '$label musi mieć minimum $min znaków'
                 }," ;
         }
         if (array_key_exists("regexp",$rules)) // if rules array have value regular expression validation

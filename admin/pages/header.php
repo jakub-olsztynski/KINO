@@ -5,7 +5,7 @@ if(!isset($_SESSION['admin']))
 {
   header('location:../index.php');
 }
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set('Europe/Warsaw');
 include('../../config.php');
 ?>
 <!DOCTYPE html>
@@ -122,7 +122,7 @@ include('../../config.php');
         </li>
         
           <li class="treeview">
-          <a href="add_theatre.php">
+          <a href="add_account.php">
             <i class="fa fa-film"></i> <span>Dodaj Pracownika</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -130,7 +130,7 @@ include('../../config.php');
           </a>
         </li>
         <li class="treeview">
-          <a href="add_movie_news.php">
+          <a href="list_accounts.php">
             <i class="fa fa-plus"></i> <span>Lista Pracowników</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
