@@ -8,11 +8,11 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        View Shows
+        Status Seansu
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">View Shows</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Indeks</a></li>
+        <li class="active">Status Seansu</li>
       </ol>
     </section>
 
@@ -21,7 +21,7 @@ include('header.php');
       <!-- Default box --> 
       <div class="box">
          <div class="box-header with-border">
-              <h3 class="box-title">Available Shows</h3>
+              <h3 class="box-title">Seanse do wyświetlenia</h3>
             </div>
         <div class="box-body">
           <?php include('../../msgbox.php');?>
@@ -31,19 +31,19 @@ include('header.php');
           {?>
             <table class="table">
               <th class="col-md-1">
-                Sl.no
+                Seans#
               </th>
               <th class="col-md-2">
-                Screen
+                Sala
               </th>
               <th class="col-md-3">
-                Show Time
+                Godzina
               </th>
               <th class="col-md-3">
-                Movie
+                Film
               </th>
               <th class="col-md-3">
-                Options
+                Opcje
               </th>
               <?php
               $sl=1;
@@ -74,14 +74,14 @@ include('header.php');
                   <td>
                     <?php if($shows['r_status']==1)
                     {
-                    ?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=0"><button class="btn btn-danger">Stop Running</button></a>
+                    ?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=0"><button class="btn btn-danger">Deaktywuj Seans</button></a>
                     <?php
                     }
                     else
-                    {?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=1"><button class="btn btn-success">Start Running</button></a>
+                    {?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=1"><button class="btn btn-success">Aktywuj Seans</button></a>
                     <?php 
                     }?>
-                    <a href="stop_running.php?id=<?php echo $shows['s_id'];?>"><button class="btn btn-warning">Stop Show</button></a>
+                    <a href="stop_running.php?id=<?php echo $shows['s_id'];?>"><button class="btn btn-warning">Usuń Seans</button></a>
                   </td>
                 </tr>
                 <?php
@@ -93,7 +93,7 @@ include('header.php');
           else
           {
             ?>
-            <h3>No Shows Added</h3>
+            <h3>Brak Dodanych Seansów</h3>
             <?php
           }
           ?>
