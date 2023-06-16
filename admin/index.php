@@ -47,7 +47,7 @@
       </div>
     </form>
 
-    <a href="../theatre/index.php">Przejdź do panelu kina</a>
+    <a href="../pracownik/index.php">Przejdź do panelu kina</a>
 
   </div>
   <!-- /.login-box-body -->

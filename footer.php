@@ -11,12 +11,6 @@
 		              </div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
-					<div class="textcontact">
-						<p>Theatre Assistance<br>
-						Online Movie Theatre Booking System<br>
-						Ph: 6969786969<br>
-						</p>
-					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="call_info">
