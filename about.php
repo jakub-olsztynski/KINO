@@ -28,7 +28,6 @@
 
 								<thead>
 										<tr>
-											<th class="text-center" style="font-size:16px;"><b>Sala</b></th>
 											<th class="text-center" style="font-size:16px;"><b>Godzina</b></th>
 										</tr>
 									</thead>
@@ -46,9 +45,6 @@
 
 									<tbody>
 									<tr>
-										<td >
-											<?php echo $theatre['name'].", ".$theatre['place'];?>
-										</td>
 										<td>
 											<?php $tr=mysqli_query($con,"select * from tbl_shows where movie_id='".$movie['movie_id']."' and theatre_id='".$shw['theatre_id']."'");
 											while($shh=mysqli_fetch_array($tr))
