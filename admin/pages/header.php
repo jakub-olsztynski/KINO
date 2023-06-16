@@ -75,7 +75,7 @@ include('../../config.php');
                 <img src="admin-icn.png" class="img-circle" alt="User Image">
 
                 <p>
-                  Theatre Assistant
+                  Pracownik Kina
                 </p>
               </li>
               <li class="user-footer">

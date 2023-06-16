@@ -4,6 +4,8 @@ session_start();
 $email = $_POST["Email"];
 $pass = $_POST["Hasło"];
 $qry=mysqli_query($con,"select * from tbl_login where username='$email' and password='$pass'");
+$hashed_password=$qry['password'];
+password_verify($hashed_password, $pass);
 if(mysqli_num_rows($qry))
 {
 	$usr=mysqli_fetch_array($qry);
