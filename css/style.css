@@ -323,7 +323,7 @@ a:hover {
 }
 /*--Content--*/
 .content {
-  background: #e8dae8;
+  background: #e8d0e8;
   padding: 20px 0;
 }
 /*  GRID OF THREE   ============================================================================= */
@@ -529,7 +529,7 @@ p.s-img a:hover {
 }
 /*--Footer--*/
 .footer {
-  background: 222;
+  background: #222;
 }
 .footer-top {
   padding: 20px 0;
@@ -603,7 +603,7 @@ p.txt_4 {
 }
 .footer-nav li a {
   font-size: 13px;
-  color: #666;
+  color: #666666;
   vertical-align: top;
   line-height: 21px;
 }
@@ -846,11 +846,11 @@ li.m_bottom {
   margin-bottom: 0px;
 }
 h4.h-text a {
-  color: #db9603;
+  color: #0408da;
   font-size: 1.2em;
 }
 h4.h-text a:hover {
-  color: #888;
+  color: #0856e7;
 }
 /*--404 page--*/
 .pnot {
