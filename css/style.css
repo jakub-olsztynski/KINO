@@ -323,7 +323,7 @@ a:hover {
 }
 /*--Content--*/
 .content {
-  background: #e8dae8;
+  background: #e8d0e8;
   padding: 20px 0;
 }
 /*  GRID OF THREE   ============================================================================= */
@@ -603,7 +603,7 @@ p.txt_4 {
 }
 .footer-nav li a {
   font-size: 13px;
-  color: #666;
+  color: #666666;
   vertical-align: top;
   line-height: 21px;
 }
